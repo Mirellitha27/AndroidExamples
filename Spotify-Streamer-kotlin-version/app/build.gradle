@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "25.0.0"
+
+    defaultConfig {
+        applicationId "com.silmood.spotify_streamer"
+        minSdkVersion 17
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors{
+        mock {
+            applicationIdSuffix = ".mock"
+        }
+        prod{
+            applicationIdSuffix = ".prod"
+        }
+    }
+
+    android.variantFilter { variant ->
+        if (variant.buildType.name.equals('release') && variant.getFlavors().get(0).name.equals('mock')) {
+            variant.setIgnore(true);
+        }
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    rootProject.appDependencies.each {
+        add(it.configuration, it.dependency)
+    }
+
+}
+repositories {
+    mavenCentral()
+}

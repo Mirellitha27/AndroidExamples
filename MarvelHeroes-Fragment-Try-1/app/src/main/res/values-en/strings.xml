@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Marvel Heroes</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="copyright_marvel">Copyright Marvel</string>
+    <string name="network_error_message">Network Error. Try Again?</string>
+    <string name="service_error_message">Server Error. Try Again?</string>
+    <string name="Ok">Ok</string>
+    <string name="no_information_message">No information available</string>
+
+</resources>
