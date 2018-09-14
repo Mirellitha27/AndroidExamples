@@ -5,10 +5,6 @@ import com.anncode.mediumapi.user.interactor.UserInteractorImpl;
 import com.anncode.mediumapi.user.model.User;
 import com.anncode.mediumapi.user.view.UserView;
 
-/**
- * Created by anahisalgado on 20/06/17.
- */
-
 public class UserPresenterImpl implements UserPresenter {
     private UserView userView;
     private UserInteractor userInteractor;

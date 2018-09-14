@@ -14,10 +14,6 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-/**
- * Created by anahisalgado on 20/06/17.
- */
-
 public class PostListAdapterRV extends RecyclerView.Adapter<PostListAdapterRV.PostListAdapterViewHolder> {
 
     private ArrayList<Post> posts;
@@ -50,14 +46,14 @@ public class PostListAdapterRV extends RecyclerView.Adapter<PostListAdapterRV.Po
     }
 
 
-    public class PostListAdapterViewHolder extends RecyclerView.ViewHolder{
+    class PostListAdapterViewHolder extends RecyclerView.ViewHolder{
 
         private ImageView pictureCard;
         private TextView tvStoryName;
         private TextView tvStoryDescription;
 
 
-        public PostListAdapterViewHolder(View itemView) {
+        PostListAdapterViewHolder(View itemView) {
             super(itemView);
 
             pictureCard     = (ImageView) itemView.findViewById(R.id.pictureCard);

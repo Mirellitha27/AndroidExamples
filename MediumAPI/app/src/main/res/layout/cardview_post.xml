@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
-        >
+        android:layout_alignParentEnd="true">
 
         <ImageView
             android:id="@+id/pictureCard"
@@ -21,7 +21,7 @@
             android:layout_height="300dp"
             android:background="@drawable/androidcontains"
             android:scaleType="centerCrop"
-            />
+            android:contentDescription="@string/app_name" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,8 +30,7 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:paddingBottom="16dp"
-            android:background="@color/backgroundtext_card"
-            >
+            android:background="@color/backgroundtext_card">
 
             <TextView
                 android:id="@+id/tvStoryName"
@@ -39,8 +38,7 @@
                 android:layout_height="wrap_content"
                 android:text="Mi primera historia"
                 android:textColor="@android:color/white"
-                android:textSize="25sp"
-                />
+                android:textSize="25sp" />
 
             <TextView
                     android:id="@+id/tvStoryDescription"
@@ -48,8 +46,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/story_desription"
                     android:textColor="@android:color/white"
-                    android:textSize="15sp"
-                    />
+                    android:textSize="15sp" />
         </LinearLayout>
 
     </FrameLayout>
