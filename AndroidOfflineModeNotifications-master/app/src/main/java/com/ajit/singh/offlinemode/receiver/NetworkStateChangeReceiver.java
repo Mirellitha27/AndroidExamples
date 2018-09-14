@@ -26,6 +26,7 @@ public class NetworkStateChangeReceiver extends BroadcastReceiver {
     try {
       if (context != null) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(CONNECTIVITY_SERVICE);
+        assert connectivityManager != null;
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         return networkInfo != null && networkInfo.isConnected();
       }

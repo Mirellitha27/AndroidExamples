@@ -11,6 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.ajit.singh.offlinemode.receiver.NetworkStateChangeReceiver;
 
+import java.util.Objects;
+
 import static com.ajit.singh.offlinemode.receiver.NetworkStateChangeReceiver.IS_NETWORK_AVAILABLE;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         boolean isNetworkAvailable = intent.getBooleanExtra(IS_NETWORK_AVAILABLE, false);
         String networkStatus = isNetworkAvailable ? "connected" : "disconnected";
 
-        Snackbar.make(findViewById(R.id.activity_main), "Network Status: " + networkStatus, Snackbar.LENGTH_LONG).show();
+        Snackbar.make(Objects.requireNonNull(findViewById(R.id.activity_main)), "Network Status: " + networkStatus, Snackbar.LENGTH_LONG).show();
       }
     }, intentFilter);
   }
