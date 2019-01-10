@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+   <EditText
+       android:id="@+id/EdNombre"
+       android:hint="Nombre"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/EdEmail"
+        android:hint="Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:hint="Save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnRead"
+        android:hint="Lee datos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnReadName"
+        android:hint="Lee por nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnReadId"
+        android:hint="Lee por Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+ <Button
+     android:id="@+id/btnUpdate"
+     android:hint="Actualizar por id"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content" />
+
+ <Spinner
+     android:id="@+id/spinner"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content" />
+</LinearLayout>
